@@ -1,0 +1,6 @@
+{
+  "name": "Asistente Enciclopedia Musical",
+  "description": "Asistente virtual especializado en responder consultas basadas exclusiva y estrictamente en la documentación musical proporcionada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
