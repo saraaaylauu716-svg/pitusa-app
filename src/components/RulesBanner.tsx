@@ -34,7 +34,7 @@ export const RulesBanner: React.FC = () => {
           <div className="flex items-start gap-2">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0" />
             <span>
-              <strong className="text-amber-300">Solo de ellos (Filtro estricto):</strong> Si la consulta no es sobre un artista musical o su obra, responde con rigor: <em>&quot;Lo siento, pero no dispongo de esa información en la base de datos proporcionada.&quot;</em>
+              <strong className="text-amber-300">Solo de ellos (Filtro estricto):</strong> Si la consulta no es sobre un artista musical o su obra, responde con rigor: <em>&quot;Lo siento, pero solo respondo consultas sobre artistas musicales, bandas, cantantes y su obra musical.&quot;</em>
             </span>
           </div>
 

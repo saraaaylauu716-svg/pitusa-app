@@ -40,9 +40,9 @@ const SAMPLE_QUESTIONS: SuggestedQuestion[] = [
   },
   {
     id: "q6",
-    label: "Prueba Fuera de Artistas",
-    text: "¿Cómo se prepara una lasaña casera y cuántos grados requiere el horno?",
-    category: "fuera_de_base",
+    label: "Freddie Mercury & Queen",
+    text: "¿Cuáles son las canciones más icónicas compuestas por Freddie Mercury y cuál fue el impacto de Queen en Live Aid 1985?",
+    category: "historia",
   },
 ];
 

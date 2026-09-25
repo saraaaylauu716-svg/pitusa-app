@@ -173,9 +173,15 @@ app.post("/api/chat", async (req, res) => {
         reply: matchedSections.slice(0, 3).join("\n\n---\n\n"),
       });
     } else {
-      res.json({
-        reply: NOT_FOUND_EXACT_PHRASE,
-      });
+      if (!process.env.GEMINI_API_KEY) {
+        res.json({
+          reply: `${NOT_FOUND_EXACT_PHRASE}\n\n*(Nota: Para habilitar el conocimiento de todos los artistas con IA en GitHub, configura tu \`GEMINI_API_KEY\` en el archivo \`.env\`)*`,
+        });
+      } else {
+        res.json({
+          reply: NOT_FOUND_EXACT_PHRASE,
+        });
+      }
     }
   } catch (error) {
     console.error("Error processing chat request:", error);

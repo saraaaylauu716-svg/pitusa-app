@@ -9,6 +9,6 @@ export interface ChatMessage {
 export interface SuggestedQuestion {
   id: string;
   text: string;
-  category: "premios" | "discografia" | "biografia" | "fuera_de_base";
+  category: "premios" | "discografia" | "biografia" | "historia" | "fuera_de_base";
   label: string;
 }

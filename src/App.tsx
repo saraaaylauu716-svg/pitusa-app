@@ -12,7 +12,7 @@ const INITIAL_MESSAGES: ChatMessage[] = [
     id: "welcome-1",
     role: "assistant",
     content:
-      "¡Hola! Soy **Pitusa** 🍪, tu IA especialista en **artistas musicales**.\n\nEstoy configurada para responder **absolutamente todo sobre los artistas y solo sobre ellos**: bandas, solistas, integrantes, discografías completas, álbumes cumbres, canciones emblemáticas, premios (Grammys, Gardel de Oro, Óscars, etc.), récords y biografías.\n\nSi tu pregunta trata sobre cualquier artista musical, te responderé con el máximo detalle y rigor. Si me preguntas sobre cualquier tema ajeno a artistas musicales, te responderé estrictamente que no dispongo de esa información.\n\n¿Sobre qué artista o banda te gustaría consultar?",
+      "¡Hola! Soy **Pitusa** 🍪, tu IA especialista en **artistas musicales**.\n\nEstoy configurada para responder **absolutamente todo sobre los artistas y solo sobre ellos**: bandas, solistas, integrantes, discografías completas, álbumes cumbres, canciones emblemáticas, premios (Grammys, Gardel de Oro, Óscars, etc.), récords y biografías.\n\nSi tu pregunta trata sobre cualquier artista musical, te responderé con el máximo detalle y rigor. Si me preguntas sobre temas ajenos a artistas musicales, te responderé estrictamente que solo respondo sobre artistas y su obra musical.\n\n¿Sobre qué artista o banda te gustaría consultar?",
     timestamp: "Inicio",
   },
 ];
@@ -71,7 +71,7 @@ export default function App() {
       const data = await res.json();
       const replyText =
         data.reply ||
-        "Lo siento, pero no dispongo de esa información en la base de datos proporcionada.";
+        "Lo siento, pero solo respondo consultas sobre artistas musicales, bandas, cantantes y su obra musical.";
 
       const assistantMessage: ChatMessage = {
         id: `assistant-${Date.now()}`,
@@ -90,7 +90,7 @@ export default function App() {
         id: `assistant-err-${Date.now()}`,
         role: "assistant",
         content:
-          "Lo siento, pero no dispongo de esa información en la base de datos proporcionada.",
+          "Lo siento, pero solo respondo consultas sobre artistas musicales, bandas, cantantes y su obra musical.",
         timestamp: new Date().toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",

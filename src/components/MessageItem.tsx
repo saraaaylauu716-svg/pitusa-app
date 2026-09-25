@@ -11,7 +11,9 @@ export const MessageItem: React.FC<MessageItemProps> = ({ message }) => {
   const isAssistant = message.role === "assistant";
   const isStrictNotFound =
     message.content.trim() ===
-    "Lo siento, pero no dispongo de esa información en la base de datos proporcionada.";
+      "Lo siento, pero solo respondo consultas sobre artistas musicales, bandas, cantantes y su obra musical." ||
+    message.content.trim() ===
+      "Lo siento, pero no dispongo de esa información en la base de datos proporcionada.";
 
   const handleCopy = async () => {
     try {
